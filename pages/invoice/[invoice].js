@@ -3,12 +3,7 @@ import data from "../../data.json";
 import { InvoiceDetail } from "../../components";
 
 function invoice({ invoice }) {
-    console.log(invoice);
-    return (
-        <div>
-            <InvoiceDetail invoice={invoice} />
-        </div>
-    );
+    return <InvoiceDetail invoice={invoice} />;
 }
 
 export default invoice;
