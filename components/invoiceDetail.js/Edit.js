@@ -3,15 +3,24 @@ import styled from "styled-components";
 
 function Edit() {
     return (
-        <div>
+        <Container>
             <Button>Edit</Button>
             <DeleteBtn>Delete</DeleteBtn>
             <MarkBtn>Mark as Paid</MarkBtn>
-        </div>
+        </Container>
     );
 }
 
 export default Edit;
+
+export const Container = styled.div`
+    background-color: #ffffff;
+    padding: 1.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+`;
 
 export const Button = styled.button`
     border-radius: 24px;
@@ -20,9 +29,9 @@ export const Button = styled.button`
     border: 0;
     padding: 1em 1.5em;
     font-weight: bold;
-    margin: 0 0.3em;
     font-size: 12px;
     cursor: pointer;
+    margin: 0 0.5em;
 `;
 export const DeleteBtn = styled(Button)`
     background-color: #ec5757;

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Detail from "./Detail";
 import styled from "styled-components";
+import Edit from "./Edit";
 
 function index({ invoice }) {
     return (
@@ -10,6 +11,8 @@ function index({ invoice }) {
                 <Header status={invoice.status} />
                 <Detail invoice={invoice} />
             </Container>
+
+            <Edit />
         </Section>
     );
 }
@@ -17,17 +20,9 @@ function index({ invoice }) {
 export default index;
 
 export const Container = styled.div`
-    margin: 0 auto;
-    max-width: 730px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+    padding: 1em 1em 3em;
 `;
 export const Section = styled.div`
     background: #f8f8fb;
-    height: 100vh;
-    box-sizing: border-box;
-    margin: 0;
+    margin: 0 auto;
 `;
